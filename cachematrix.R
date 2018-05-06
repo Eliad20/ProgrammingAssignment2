@@ -1,5 +1,8 @@
-## The function is taking a matrix, inverted it and caching it for the next time,
-## so if the inversion has done once on the current matrix - it won't be done again, unless a new input has been set. 
+## Student: Eli Adler
+
+## This pair of functions is taking a matrix, inverted it and caching it for the next time,
+## so if the inversion has done once on the current matrix - it won't be done again and the cached result will used,
+## unless a new input (a new matrix) has been set. 
 
 ## This function defining an object - "makeCacheMatrix" a list that getting a matrix as a input and defining
 ## 4 functions (2 setters & 2 getters) & 2 objects (x & m).
@@ -20,9 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## This function getting an object of the makeCacheMatrix type (makeCacheMatrix of a matrix) as an input
-## Then it check whether it had been already performed on the current data, if so - it print the cached inverted matrix
-## and write: "getting cached data", if not - it will apply the 'solve' function to the matrix in the makeCacheMatrix list,
-## and then print the inverted matrix that just been calculated.
+## Then check whether it had been already performed on the current data, if so - it print the cached inverted matrix
+## and write: "getting cached data".
+## If not - it will apply the 'solve' function to the matrix in the makeCacheMatrix list, and print the inverted matrix that just been calculated.
 
 cacheSolve <- function(x, ...) {
     m <- x$getsolve()
